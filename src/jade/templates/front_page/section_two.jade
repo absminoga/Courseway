@@ -1,0 +1,25 @@
+//----------- Section Two ------------------
+section.section_two#courses
+   .container
+      .wrapper
+         .section_title.courses_title
+            .section_title_top доступні курси
+            .section_title_bottom Запишіться прямо зараз на безкоштовні курси
+         .block_courses_cards
+            mixin courses_cards(title, description, imageName)
+               article.courses_cards
+                  .card_text 
+                     .card_text_title #{title}
+                     .card_text_description 
+                        p #{description}
+                        p 
+                           a(href="#") Read more ...
+                     .card_text_btn 
+                        a(href="#") Зареєструватись на курс!
+                  div.courses_card_img
+                     img(src="images/section_two/#{imageName}.jpg" alt="card image")
+            +courses_cards("Основи програмування", "After the first 50 completed projects to make a mistake with the deadlines almost unreal.", "algoritms")
+            +courses_cards("Розробка та аналіз алгоритмів", "After the first 50 completed projects to make a mistake with the deadlines almost unreal. ", "code")
+            +courses_cards("Економіка для всіх", "After the first 50 completed projects to make a mistake with the deadlines almost unreal.", "economic")
+            +courses_cards("Історія України", "After the first 50 completed projects to make a mistake with the deadlines almost unreal.", "war")
+

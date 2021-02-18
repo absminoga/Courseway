@@ -1,0 +1,100 @@
+/* -------- Section Two style ------------*/
+.section_two {
+   background-color: #f0f0f0;
+   .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .courses_title {
+         width: 100%;
+         margin-bottom: calc(25px + 0.7vmin);
+      }
+      .block_courses_cards {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         width: 100%;
+         flex-wrap: wrap;
+      }
+   }
+   .block_courses_cards {
+      .courses_cards {
+         flex: 1 1 auto;
+         max-width: calc(50% - 18px);
+         display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+         align-items: stretch;
+         background-color: #e8e8e8;
+         margin-bottom: 18px;
+         box-shadow: 1px 5px 10px transparent;
+         transition: box-shadow 0.5s ease-in-out;
+
+         &:hover {
+            box-shadow: 1px 5px 10px #4f4e4e;
+         }
+
+         .card_text {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: stretch;
+            flex-wrap: wrap;
+            width: 50%;
+            padding: calc(16px + 0.5vmin);
+            padding-top: 14px;
+            .card_text_title {
+               font: {
+                  family: OpenSans;
+                  size: calc(16px + 1vmin);
+               }
+               line-height: 1.3;
+               text-align: center;
+               margin-bottom: calc(12px + 0.2vmin);
+               color: #3e3e3e;
+            }
+            .card_text_description {
+               font: {
+                  family: LatoRegular;
+                  size: calc(12px + 0.4vmin);
+               }
+               line-height: 1.7;
+               text-align: justify;
+               align-self: flex-start;
+               margin-bottom: calc(20px + 1vmin);
+               color: #3e3e3e;
+               p:last-child {
+                  a {
+                     color: #fa3a5e;
+                     font-weight: 600;
+                  }
+               }
+            }
+            .card_text_btn {
+               width: 100%;
+               display: flex;
+               justify-content: flex-end;
+               align-self: flex-end;
+               a {
+                  padding: 10px 13px;
+                  background-color: #ba271f;
+                  color: $white;
+                  text-transform: uppercase;
+                  font: {
+                     family: LatoRegular;
+                     size: 10px;
+                  }
+               }
+            }
+         }
+         .courses_card_img {
+            width: 50%;
+            padding: calc(16px + 1vmin);
+            padding-bottom: calc(16px + 0.5vmin);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      }
+   }
+}

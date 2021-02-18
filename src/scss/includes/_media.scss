@@ -1,0 +1,316 @@
+/* ----------- Media ---------------*/
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 992px) {
+   /*--------Header --------- */
+   .main-header {
+      .main-header-logo {
+         width: 50%;
+      }
+      .main-header-nav {
+         display: none;
+      }
+
+      .hamburger-nav--btn {
+         display: unset;
+         width: 30px;
+         height: 26px;
+      }
+
+      /*--------Hamburger menu --------- */
+      .hamburger-list--active {
+         position: absolute;
+         top: 0;
+         left: -15px;
+         height: 100vh;
+         width: calc(100% + 30px);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         background-color: rgba(0, 0, 0, 0.7);
+         z-index: -1;
+         @media (orientation: landscape) {
+            padding-top: calc(60px + 3.5vmin);
+         }
+         .hamburger-nav-item {
+            &:not(:last-child) {
+               margin-bottom: 10px;
+            }
+
+            a {
+               position: relative;
+               display: block;
+               padding: 5px;
+               border: 1px solid transparent;
+               border-radius: 20px;
+               font-family: LatoRegular;
+               font-size: calc(15px + 2vmin);
+               text-shadow: wheat;
+               color: $white;
+               transition: all 1s ease-in-out;
+
+               &::after {
+                  content: " ";
+                  position: absolute;
+                  bottom: -5px;
+                  left: 20%;
+                  width: 80%;
+                  height: 2px;
+                  background-color: transparent;
+                  transition: all 1s linear;
+               }
+               &:hover::after {
+                  background-color: $white;
+               }
+            }
+         }
+      }
+   }
+
+   /*--------Hamburger button --------- */
+   .hamburger-nav--btn {
+      overflow: hidden;
+
+      #menu_checkbox {
+         width: 28px;
+         height: 30px;
+         display: none;
+      }
+
+      #menu_label {
+         position: relative;
+         width: 30px;
+         height: 26px;
+         display: block;
+
+         &:before,
+         &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+         }
+
+         &:before {
+            top: 0px;
+         }
+
+         &:after {
+            bottom: 0px;
+         }
+
+         span {
+            position: relative;
+            display: block;
+            top: 12px;
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+         }
+      }
+
+      #menu_checkbox:checked + #menu_label > #menu_line {
+         opacity: 0;
+      }
+
+      #menu_checkbox:checked + #menu_label:before {
+         top: 12px;
+         transform: rotate(-45deg);
+         background-color: $white;
+      }
+
+      #menu_checkbox:checked + #menu_label:after {
+         transform: rotate(45deg);
+         bottom: 11px;
+         background-color: $white;
+      }
+   }
+
+   /*--------Form authorization --------- */
+   .header_authorization {
+      width: 100%;
+      justify-content: center;
+      .form__authorization {
+         width: 60%;
+         margin: 0;
+      }
+   }
+   /*-----------Section Two -----*/
+   .section_two {
+      .block_courses_cards {
+         .courses_cards {
+            max-width: 100%;
+            .card_text {
+               .card_text_title {
+                  font: {
+                     family: OpenSans;
+                     size: calc(16px + 1.2vmin);
+                  }
+               }
+               .card_text_description {
+                  font: {
+                     family: LatoRegular;
+                     size: calc(12px + 0.6vmin);
+                  }
+               }
+               .card_text_btn {
+                  a {
+                     font: {
+                        family: LatoRegular;
+                        size: 12px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   /*----------- section Four ----*/
+}
+
+@media screen and (max-width: 768px) {
+   /*-----------Section One -----*/
+   .section_one {
+      .block_features_cards {
+         .features_card {
+            width: 43%;
+         }
+      }
+   }
+   /*-----------Section Two -----*/
+   .section_two {
+      .block_courses_cards {
+         .courses_cards {
+            max-width: 100%;
+            .card_text {
+               .card_text_title {
+                  font: {
+                     family: OpenSans;
+                     size: calc(16px + 1vmin);
+                  }
+               }
+               .card_text_description {
+                  font: {
+                     family: LatoRegular;
+                     size: calc(12px + 0.4vmin);
+                  }
+               }
+               .card_text_btn {
+                  a {
+                     font: {
+                        family: LatoRegular;
+                        size: 10px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   /*--------Section Three ------*/
+   .section_three {
+      .wrapper {
+         .image_swiper_wrapper {
+            .partners_cards {
+               width: 50% !important;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               align-content: stretch;
+               flex-wrap: wrap;
+               margin-bottom: calc(20px + 0.5vmin);
+            }
+            .swiper-slide {
+               max-height: 300px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 576px) {
+   /*-----------Section One -----*/
+   .section_one {
+      .block_features_cards {
+         .features_card {
+            max-width: 50%;
+         }
+         .features_logo {
+            display: none;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 480px) {
+   /*-----------Header -----*/
+   .main-header {
+      .main-header-logo {
+         width: 50%;
+         font-size: calc(30px + 1vw);
+      }
+   }
+   .header_authorization {
+      .form__authorization {
+         width: 100%;
+         margin-right: unset;
+      }
+   }
+   .section_one {
+      .block_features_cards {
+         .features_card {
+            min-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+         }
+      }
+   }
+   /*-----------Section Two -----*/
+   .section_two {
+      .block_courses_cards {
+         .courses_cards {
+            max-width: 100%;
+            .card_text {
+               width: 100%;
+               .card_text_title {
+                  font: {
+                     family: OpenSans;
+                     size: calc(16px + 1vmin);
+                  }
+               }
+               .card_text_description {
+                  font: {
+                     family: LatoRegular;
+                     size: calc(12px + 0.4vmin);
+                  }
+               }
+               .card_text_btn {
+                  a {
+                     font: {
+                        family: LatoRegular;
+                        size: 10px;
+                     }
+                  }
+               }
+            }
+            .courses_card_img {
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 320px) {
+}

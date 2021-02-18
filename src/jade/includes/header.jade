@@ -1,0 +1,40 @@
+header#main
+   .container
+      .main-header
+         .main-header-logo
+            a(href="#") courseway
+         nav.main-header-nav.header-nav-list
+            .header-nav-item
+               a(href="#main") головна
+            .header-nav-item
+               a(href="#courses") курси
+            .header-nav-item
+               a(href="#blog") блог
+            .header-nav-item
+               a(href="#about") про проект
+            .header-nav-item
+               a(href="#registration") реєстрація
+         .hamburger-nav--btn
+            input#menu_checkbox(type='checkbox')
+            label#menu_label(for='menu_checkbox')
+               span#menu_line
+         nav.hamburger-nav-list
+            .hamburger-nav-item
+               a(href="#main") головна
+            .hamburger-nav-item
+               a(href="#courses") курси
+            .hamburger-nav-item
+               a(href="#blog") блог
+            .hamburger-nav-item
+               a(href="#about") про проект
+            .hamburger-nav-item
+               a(href="#registration") реєстрація
+      .header_description.title_description
+         h1.title_description_top безкоштовні онлайн-курси
+         h3.title_description_bottom від викладачів провідних універсітетів світу
+      .header_authorization
+         form(action="").form__authorization
+            input(type="text" placeholder="Email:" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Введите правильній формат Email").form_email.form_field
+            input(type="password" placeholder="Password:" pattern=".{6,}" title="Введите 6 или больше символов").form_password.form_field
+            button.form_btn.form_field розпочати!
+   .header_bg

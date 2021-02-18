@@ -1,0 +1,20 @@
+//----------- Section One
+section.section_one
+   .container
+      .wrapper 
+         .section_title.reatures_title
+            .section_title_top переваги
+         .block_features_cards
+            mixin features_cards(imageName, title, description)
+               article.features_card
+                  div.portfolio_card_img
+                     img(src="images/section_one/#{imageName}.svg" alt="card image")
+                  .features_card_title #{title}
+                  .features_card_description #{description}
+            +features_cards("Clock", "Будь-коли", "Навчайтесь у зручний для Вас час. Відеолекції, тести та форум доступні цілодобово.")
+            +features_cards("Iphone", "Будь-який пристрій", "Навчайтесь на комп’ютері, планшеті чи телефоні: сайт підлаштується під Ваш пристрій.")
+            +features_cards("Globe", "Будь-де", "Проходьте курси, не виходячи з дому чи в дорозі. Все, що Вам знадобиться, – це доступ до інтернету.")
+            +features_cards("Man", "Будь-хто", "Наші курси абсолютно безкоштовні – захмарні ціни більше ніколи не стануть на заваді найкращій освіті.")
+            object(type="image/svg+xml" data="images/section_one/Lyre Filled-100.svg").features_logo
+
+

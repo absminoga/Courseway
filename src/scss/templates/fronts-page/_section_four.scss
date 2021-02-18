@@ -1,0 +1,106 @@
+/* -------- Section Four style ------------*/
+.section_four {
+   background-color: #fffcf4;
+   position: relative;
+   z-index: 2;
+   .section_four_bg {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      .section_four_bg_left {
+         width: 50%;
+         background-image: url("../images/section_four/education.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         @media screen and (max-width: 480px) {
+            height: 35%;
+            width: 100%;
+            order: 0;
+         }
+      }
+      .section_four_bg_right {
+         width: 50%;
+         background-color: #a99473;
+         @media screen and (max-width: 480px) {
+            height: 65%;
+            width: 100%;
+            order: -1;
+         }
+      }
+   }
+   .container {
+      justify-content: flex-end;
+      .block_certificate {
+         width: 50%;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-start;
+         align-items: center;
+         flex-wrap: wrap;
+         padding-left: calc(50px + 2.5vmin);
+         @media screen and (max-width: 768px) {
+            padding-left: 15px;
+         }
+         @media screen and (max-width: 480px) {
+            width: 100%;
+            padding-left: 0;
+         }
+         .block_certificate_title {
+            flex: 1 1 auto;
+            width: 100%;
+            text-align: left;
+            padding-left: 16px;
+            text-transform: uppercase;
+            color: #f5f5f5;
+            font: {
+               family: OpenSansLight;
+               size: calc(25px + 0.7vmin);
+            }
+            margin-bottom: calc(20px + 1vmin);
+         }
+         .block_certificate_description {
+            width: 80%;
+            text-align: left;
+            line-height: 1.8;
+            color: #f1f1f2;
+            font: {
+               family: LatoLite;
+               size: calc(12px + 0.3vmin);
+            }
+            margin-bottom: calc(35px + 1.5vmin);
+            @media screen and (max-width: 992px) {
+               width: 100%;
+            }
+         }
+         .block_certificate_btn {
+            width: 50%;
+            a {
+               display: block;
+               text-transform: uppercase;
+               text-align: center;
+               color: #f1f1f2;
+               padding: calc(10px + 0.8vmin);
+               background: #ba271f;
+               border: 1px solid $white;
+               border-radius: 2px;
+               font: {
+                  family: LatoLite;
+                  size: calc(16px + 0.7vmin);
+               }
+               cursor: pointer;
+            }
+            margin-bottom: calc(20px + 1vmin);
+            @media screen and (max-width: 992px) {
+               width: 70%;
+            }
+         }
+      }
+   }
+}

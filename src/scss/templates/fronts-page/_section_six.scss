@@ -1,0 +1,117 @@
+/* -------- Section Six style ------------*/
+.section_six {
+   background-color: #a99473;
+   .container {
+      justify-content: center;
+      .section_title {
+         color: #f3f3f3;
+         .section_title_top {
+            font-size: calc(30px + 3vmin);
+            color: #f3f3f3;
+         }
+      }
+      form {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+         flex-wrap: wrap;
+         width: 30%;
+         @media screen and (max-width: 768px) {
+            width: 50%;
+         }
+         @media screen and (max-width: 576px) {
+            width: 6%;
+         }
+         @media screen and (max-width: 480px) {
+            width: 70%;
+         }
+         .input_block {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: calc(20px + 1vmin);
+            width: 100%;
+            label {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               left: calc(15px + 1vmin);
+               font: {
+                  family: "OpenSans";
+                  size: calc(12px + 0.5vmin);
+               }
+               color: rgb(100, 100, 100);
+            }
+            .label_hidden {
+               left: -100px;
+            }
+            .entry_field {
+               width: 100%;
+               height: 100%;
+               font: {
+                  family: "OpenSans";
+                  size: calc(12px + 0.5vmin);
+               }
+               color: rgb(63, 63, 63);
+               border: 1px solid rgb(169, 169, 169);
+               padding: calc(10px + 0.6vmin) calc(15px + 1vmin);
+            }
+         }
+      }
+      .field_form {
+         .field_form_input {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            .feedback_name,
+            .feedback_email {
+               flex: 1 1 auto;
+               max-width: 100%;
+               min-width: 290px;
+               margin-bottom: calc(20px + 1vw);
+               border: none;
+               outline: none;
+            }
+            label {
+               opacity: 1;
+               transition: opacity 0.2s linear;
+               color: #ababab;
+            }
+            input[type="text"]:focus {
+               outline: none;
+            }
+            input:focus + label {
+               opacity: 0;
+            }
+         }
+         .form_btn {
+            width: 50%;
+            @media screen and (max-width: 768px) {
+               width: 50%;
+            }
+            @media screen and (max-width: 576px) {
+               width: 60%;
+            }
+            text-align: center;
+            padding: calc(15px + 0.6vmin) calc(30px + 1vmin);
+            font: {
+               family: "LatoRegulars";
+               size: calc(14px + 0.5vmin);
+            }
+            text-transform: capitalize;
+            color: $white;
+            background-color: #ba271f;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.5s linear;
+         }
+         .form_btn:hover {
+            box-shadow: 1px 1px 2px rgb(99, 98, 98);
+         }
+      }
+   }
+}

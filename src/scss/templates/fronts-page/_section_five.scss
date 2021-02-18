@@ -1,0 +1,61 @@
+/* -------- Section Five style ------------*/
+.section_five {
+   background-color: #fffcf4;
+   .team_block_cards {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 1200px) {
+         justify-content: center;
+      }
+
+      .member_cards {
+         width: calc(25% - 36px);
+         min-width: 260px;
+         margin-bottom: calc(20px + 0.6vmin);
+         margin-right: 15px;
+         .courses_cards_img {
+            max-width: 290px;
+            margin-bottom: calc(25px + 1.5vmin);
+         }
+         .courses_cards_name {
+            text-align: center;
+            font: {
+               family: LatoRegular;
+               size: calc(15px + 0.6vmin);
+            }
+            color: #3e3e3e;
+            margin-bottom: calc(15px + 0.6vmin);
+         }
+         .courses_cards_description {
+            text-align: center;
+            line-height: 1.5;
+            font: {
+               family: LatoRegular;
+               size: calc(12px + 0.2vmin);
+            }
+            color: #3e3e3e;
+            padding: 0 calc(15px + 1vmin);
+            margin-bottom: calc(15px + 0.6vmin);
+         }
+         .courses_cards_link {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 calc(20px + 2vmin);
+            div {
+               max-width: 27px;
+               a {
+                  display: block;
+                  cursor: pointer;
+               }
+            }
+         }
+      }
+   }
+}

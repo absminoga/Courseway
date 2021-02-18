@@ -1,0 +1,31 @@
+//----------- Section Five------------------
+section.section_five#about
+   .container
+      .section_title.team_title
+         .section_title_top розробники
+      .team_block_cards  
+         mixin member_cards(imageName, name, description)
+            .member_cards
+               .courses_cards_img
+                  img(src="images/section_five/#{imageName}.jpg" alt="member foto")
+               .courses_cards_name #{name}
+               .courses_cards_description #{description}
+               .courses_cards_link
+                  div
+                     a(href="https://www.facebook.com" target="_blank") 
+                        img(src="images/section_five/facebook.png" alt="icon facebook")
+                  div
+                     a(href="https://www.twitter.com" target="_blank") 
+                        img(src="images/section_five/twitter.png" alt="icon twitter") 
+                  div
+                     a(href="https://plus.google.com" target="_blank") 
+                        img(src="images/section_five/google.png" alt="icon google")
+         +member_cards("member_1", "Daniel Raynolds", "After the first 50 completed projects to make a mistake with the deadlines almost unreal. After the first hundred projects to break the promises already impossible.")   
+         +member_cards("member_2", "Nick Parson", "After the first 50 completed projects to make a mistake with the deadlines almost unreal. After the first hundred projects to break the promises already impossible.")    
+         +member_cards("member_3", "William Stanley", "After the first 50 completed projects to make a mistake with the deadlines almost unreal. After the first hundred projects to break the promises already impossible.")    
+         +member_cards("member_4", "Sarah Noel", "After the first 50 completed projects to make a mistake with the deadlines almost unreal. After the first hundred projects to break the promises already impossible.")       
+
+
+
+
+

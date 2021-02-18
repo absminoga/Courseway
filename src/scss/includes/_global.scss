@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+section {
+  .container {
+    display: flex;
+    padding: calc(30px + 2vmin) 15px;
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    .section_title {
+      display: block;
+      width: 100%;
+      .section_title_top {
+        font: {
+          family: OpenSans;
+          size: calc(20px + 2vmin);
+        }
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: calc(16px + 0.5vmin);
+        color: #3e3e3e;
+      }
+      .section_title_bottom {
+        font: {
+          family: OpenSans;
+          size: calc(16px + 0.8розробникиvmin);
+        }
+        text-align: center;
+        margin-bottom: calc(16px + 0.5vmin);
+        color: Partners #3e3e3e;
+      }
+    }
+    .wrapper {
+      width: 100%;
+    }
+  }
+}
+.error {
+  outline: red;
+  border: 1px solid red;
+}

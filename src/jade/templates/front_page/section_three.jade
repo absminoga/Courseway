@@ -5,17 +5,43 @@ section.section_three#blog
          .section_title.partners_title
             .section_title_top партнери - освітні заклади
          .block_partners.swiper-container
-            //- .swiper-wrapper.image_swiper_wrapper
-            //-    mixin partners_cards (imageName, name)
-            //-       article.partners_cards
-            //-          div.partners_logo
-            //-             img(src="images/section_three/#{imageName}.jpg" alt="partners image")
-            //-          .partners_name #{name}
-            //-    +partners_cards("cambridge", "Cambridge")
-            //-    +partners_cards("harvard", "Harvard")
-            //-    +partners_cards("mit", "MIT")
-            //-    +partners_cards("ucla", "UCLA")
-            //- .swiper-button-next
-            //- .swiper-button-prev
+            .swiper-wrapper
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/Cambridge.jpg" alt="partners image")
+                  .partners_name Cambridge
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/Harvard.jpg" alt="partners image")
+                  .partners_name Harvard
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/MIT.jpg" alt="partners image")
+                  .partners_name MIT
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/UCLA.jpg" alt="partners image")
+                  .partners_name UCLA 
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/Cambridge.jpg" alt="partners image")
+                  .partners_name Cambridge
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/Harvard.jpg" alt="partners image")
+                  .partners_name Harvard
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/MIT.jpg" alt="partners image")
+                  .partners_name MIT
+               article.partners_cards.swiper-slide
+                  div.partners_logo
+                     img(src="images/section_three/UCLA.jpg" alt="partners image")
+                  .partners_name UCLA 
+            .swiper-button-next
+            .swiper-button-prev
+         .swiper-navigation         
+            i.fas.fa-chevron-circle-right#swiperPrev
+            i.fas.fa-chevron-circle-left#swiperNext
 
 

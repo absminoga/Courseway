@@ -84,22 +84,54 @@ entryField.forEach(function (e) {
 
 
 // ------------------------- Swipe slider -------------------------
-// let mySwiper = new Swiper('.swiper-container', {
-//    slidesPerView: 1,
-//    spaceBetween: 1000,
-//    mousewheel: true,
-//    keyboard: {
-//       enabled: true,
-//    },
-//    pagination: {
-//       el: '.swiper-pagination',
-//       clickable: false,
-//    },
-//    navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//    },
-// });
+const swiper = new Swiper('.swiper-container', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+   slideToClickedSlide: true,
+   keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+   },
+   slidesPerView: 4,
+   slidePerGroup: 4,
+   spaceBetween: 20,
+   loop: true,
 
+   breakpoints: {
+      // when window width is >= 320px
+      320: {
+         slidesPerView: 2,
+         spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+         slidesPerView: 3,
+         spaceBetween: 30
+      },
+      // when window width is >= 768px
+      768: {
+         slidesPerView: 4,
+         spaceBetween: 40
+      }
+   },
+   mousewheel: {
+      invert: true,
+   },
+   observer: true,
+   observeParents: true;
+   observeSliderChildren: true,
+});
+
+const swiperPrev = document.getElementById('swiperPrev')
+const swiperNext = document.getElementById('swiperNext')
+
+swiperPrev.addEventListener('click', () => {
+   swiper.slidePrev();
+})
+swiperNext.addEventListener('click', () => {
+   swiper.slideNext();
+})
 
 

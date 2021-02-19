@@ -2,51 +2,68 @@
 .section_three {
    background-color: #fffcf4;
    .wrapper {
+      position: relative;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       .block_partners {
          width: 100%;
-         .image_swiper_wrapper {
+         .swiper-wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            align-content: stretch;
+            min-width: 0;
             width: 100%;
-            .partners_cards {
-               width: 25%;
-               display: flex;
-               flex-direction: row;
-               justify-content: center;
-               align-items: center;
-               align-content: stretch;
-               flex-wrap: wrap;
-               &:not(:last-child) {
-                  padding-right: 18px;
-               }
+            .swiper-slide {
                .partners_logo {
-                  position: relative;
-                  width: 100%;
-                  display: flex;
-                  justify-content: center;
-                  margin-bottom: calc(15px + 0.5vmin);
-                  img {
-                     height: auto;
-                     width: 100%;
-                     max-width: 255px;
-                  }
+                  margin-bottom: calc(20px + 0.6vmin);
                }
                .partners_name {
                   width: 100%;
                   text-align: center;
-                  color: #3e3e3e;
-                  padding: 2px;
+                  transition: color 0.5s linear;
                   font: {
                      family: OpenSans;
-                     size: calc(20px + 1vmin);
+                     size: calc(18px + 0.7vmin);
+                  }
+                  color: #3e3e3e;
+               }
+               &:hover {
+                  .partners_name {
+                     color: #ba271f;
                   }
                }
+            }
+         }
+         .swiper-button-next,
+         .swiper-button-prev {
+            display: none;
+         }
+      }
+      .swiper-navigation {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-25%);
+         left: -80px;
+         width: calc(100% + 150px);
+         z-index: 9999;
+         @media screen and (max-width: 1350px) {
+            left: 0;
+            width: 100%;
+         }
+         .fa-chevron-circle-right {
+            position: absolute;
+            right: 0;
+         }
+         .fa-chevron-circle-right,
+         .fa-chevron-circle-left {
+            color: #ba271f;
+            font-size: calc(20px + 2vmin);
+            cursor: pointer;
+            @media screen and (max-width: 1350px) {
+               color: #031de1c9;
             }
          }
       }

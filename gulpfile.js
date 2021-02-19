@@ -110,7 +110,8 @@ gulp.task("style", function () {
 	return gulp
 		.src([
 			//указываем, где брать исходники. Отключите то, что вам не нужно.
-			"node_modules/swiper/swiper.scss",
+			"node_modules/swiper/swiper-bundle.css",
+			"node_modules/font-awesome-4.7.0/scss/font-awesome.scss"
 		])
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
 		// .pipe(cssmin()) //минифицируем полученный файл

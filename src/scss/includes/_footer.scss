@@ -1,0 +1,85 @@
+.footer {
+   width: 100%;
+   margin: 0 auto;
+   background: #a99473;
+   .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: calc(40px + 2vmin) 15px;
+      .footer_top {
+         width: 100%;
+         text-align: center;
+      }
+      .footer_bottom {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}
+.footer_text {
+   p {
+      font: {
+         family: OpenSans;
+         size: calc(16px + 0.9vmin);
+      }
+      margin-bottom: calc(16px + 0.5vmin);
+      &:last-child {
+         margin-bottom: calc(20px + 1.3vmin);
+      }
+      a {
+         display: inline-block;
+         color: #ba271f;
+      }
+   }
+}
+
+.footer_social {
+   a {
+      display: block;
+      &:not(:last-child) {
+         margin-right: calc(30px + 1.2vmin);
+      }
+      .social_icon {
+         height: 48px;
+         width: 48px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         transition: background-image 0.5s linear;
+         @media screen and (max-width: 768px) {
+            height: 40px;
+            width: 40px;
+         }
+         @media screen and (max-width: 576px) {
+            height: 35px;
+            width: 35px;
+         }
+         @media screen and (max-width: 480px) {
+            height: 30px;
+            width: 30px;
+         }
+      }
+      .facebook {
+         background-image: url("../images/section_seven/facebook_blue.png");
+      }
+      .facebook:hover {
+         background-image: url("../images/section_seven/facebook_red.png");
+      }
+      .twitter {
+         background-image: url("../images/section_seven/twitter_blue.png");
+      }
+      .twitter:hover {
+         background-image: url("../images/section_seven/twitter_red.png");
+      }
+      .google_plus {
+         background-image: url("../images/section_seven/google_blue.png");
+      }
+      .google_plus:hover {
+         background-image: url("../images/section_seven/google_red.png");
+      }
+   }
+}

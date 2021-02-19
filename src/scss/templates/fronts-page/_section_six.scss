@@ -1,6 +1,6 @@
 /* -------- Section Six style ------------*/
 .section_six {
-   background-color: #a99473;
+   background-color: #bead92;
    .container {
       justify-content: center;
       .section_title {
@@ -8,6 +8,9 @@
          .section_title_top {
             font-size: calc(30px + 3vmin);
             color: #f3f3f3;
+         }
+         .section_title_bottom {
+            font-size: calc(20px + 0.5vmin);
          }
       }
       form {
@@ -21,7 +24,7 @@
             width: 50%;
          }
          @media screen and (max-width: 576px) {
-            width: 6%;
+            width: 60%;
          }
          @media screen and (max-width: 480px) {
             width: 70%;
@@ -71,7 +74,7 @@
                flex: 1 1 auto;
                max-width: 100%;
                min-width: 290px;
-               margin-bottom: calc(20px + 1vw);
+               margin-bottom: calc(20px + 0.6vmin);
                border: none;
                outline: none;
             }
@@ -93,7 +96,7 @@
                width: 50%;
             }
             @media screen and (max-width: 576px) {
-               width: 60%;
+               width: 70%;
             }
             text-align: center;
             padding: calc(15px + 0.6vmin) calc(30px + 1vmin);

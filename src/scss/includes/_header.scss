@@ -116,6 +116,9 @@ header {
       flex: 1 1 60%;
       text-align: right;
       line-height: 1.2;
+      @media screen and (max-width: 480px) {
+         text-align: center;
+      }
    }
    .title_description_top {
       font: {

@@ -9,9 +9,6 @@ class Course {
       this.hamburgerMenu = document.querySelector('.hamburger-nav-list');
       this.hamburgerItem = document.querySelectorAll('.hamburger-nav-item a');
 
-      // this.form = document.querySelector(".field_form");
-      // this.formBtn = this.form.querySelector(".form_btn");
-
       window.onscroll = () => {
          this.heightHeader();
       }
@@ -21,8 +18,6 @@ class Course {
       this.hamburgerItem.forEach((item) => {
          item.onclick = () => this.deleteHamburgerMenu();
       })
-
-      // this.formBtn.onclick = (a) => this.validationForm();
    }
 
    // -------------- Hamburger Menu -----------
@@ -50,14 +45,6 @@ class Course {
          this.containerMainHeader.classList.remove('header--color');
       }
    }
-
-   //------------------ Validation Form
-   // validationForm() {
-   //    event.preventDefault()
-   //    let name = this.form.querySelector('.field_name');
-   //    let nameLabel = this.form.querySelector(".label_name");
-   // }
-
 
 };
 let course = new Course();
@@ -120,7 +107,7 @@ const swiper = new Swiper('.swiper-container', {
       invert: true,
    },
    observer: true,
-   observeParents: true;
+   observeParents: true,
    observeSliderChildren: true,
 });
 

@@ -45,13 +45,13 @@ header {
    z-index: 9999;
    padding: 0 10px;
    transition: all 0.4s linear;
-
    .main-header-logo {
       width: 37%;
       cursor: pointer;
       font-family: LatoLite;
       font-size: calc(35px + 2vmin);
       text-transform: uppercase;
+      align-self: center;
 
       a {
          display: block;
@@ -63,6 +63,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-self: center;
 
       .header-nav-item {
          &:not(:last-child) {
